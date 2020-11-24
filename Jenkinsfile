@@ -11,6 +11,7 @@ pipeline {
     stage('stage2') {
       steps {
         sh 'echo "append file step2" >> hola.txt'
+        sh 'cat hola.txt'
       }
     }
 
