@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('stage1') {
           steps {
-            sh 'echo "hola"'
+            sh 'echo "hola desde el primer stage" > hola.txt'
           }
         }
 
@@ -15,6 +15,12 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('') {
+      steps {
+        sh 'cat hola.txt'
       }
     }
 
