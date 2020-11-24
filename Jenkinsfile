@@ -15,10 +15,16 @@ pipeline {
           }
         }
 
+        stage('stage 3') {
+          steps {
+            echo 'hola desde stage 3'
+          }
+        }
+
       }
     }
 
-    stage('') {
+    stage('test') {
       steps {
         sh 'cat hola.txt'
       }
